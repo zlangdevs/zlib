@@ -2,8 +2,6 @@
 
 Repo for zlang standart library. Currently WIP.
 
-ZALUPA
-
 ## TODO
 - [x] Tests
 - [ ] Tests script

@@ -1,17 +1,10 @@
-...
-We might add some compiler feature to have just INFINITY
-and do fancy stuff like INFINITY, -INFINITY for negative
-and positive infinity
-...
+u64 INFINITY = 0x7fffffff;
 
 fun is_inf(x: f64) >> bool {
-    return x == POS_INFINITY || x == NEG_INFINITY
+    return x == INFINITY || x == -INFINITY;
 }
 
-u64 POS_INFINITY = null;  ?? There is no way to represent INFINITY in decimal
-u64 NEG_INFINITY = null;  ?? (surprice)
-
-fun abs(x: i64) >> i64 {
+fun abs(x: i32) >> i32 {
     if x < 0 {
         return -x;
     } else {
@@ -54,7 +47,7 @@ fun pow(a: f64, b: i64) >> f64 {
 
     if a == 0.0 {
         if b > 0 { return 0.0; }
-        else { return POS_INFINITY as f64; }
+        else { return INFINITY as f64; }
     }
 
     if b == 1.0 || base == -1.0 {
